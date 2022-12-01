@@ -1,18 +1,71 @@
 import RestaurantImage from './jay.jpg';
+// import './style.css';
 
 export function pageLoad(element) {
-    const restImg = new Image();
-    restImg.src = RestaurantImage;
 
-    element.appendChild(restImg);
+    // HEADER
+    const header = document.createElement('div');
+    header.setAttribute('id', 'header');
 
-    const headline = document.createElement('h1');
-    headline.innerHTML = 'Restaurant';
+    // Create Logo Element
+    const logo = document.createElement('div');
+    const logoText = document.createElement('h1');
+    logoText.innerHTML = 'RESTAURANT';
+    logo.setAttribute('id', 'logo');
+    
+    logo.appendChild(logoText);
+    
+    header.appendChild(logo);
 
-    element.appendChild(headline);
+    // Create Navbar Element
+    const navbar = document.createElement('div');
+    navbar.setAttribute('id', 'navbar');
 
-    const about = document.createElement('p');
-    about.innerHTML = "Restaurant's opened on Thanksgiving Day 1990. Chef / Owner Sml began baking pies and selling them to restaurants and his neighbors out of a small kitchen at the corner of Hudson and North Moore St. in Sml. Today, NYC's beloved restaurant and pie shop celebrates 27 years of classic, made from scratch American cooking.";
+    const list = document.createElement('ul');
+    const listElementHome = document.createElement('li');
+    const listElementMenu = document.createElement('li');
+    const listElementContact = document.createElement('li');
 
-    element.appendChild(about);
+    listElementHome.innerHTML = 'Home';
+    listElementHome.setAttribute('class', 'home');
+
+    list.appendChild(listElementHome);
+
+    listElementMenu.innerHTML = 'Menu';
+    listElementMenu.setAttribute('class', 'menu');
+    
+    list.appendChild(listElementMenu);
+
+    listElementContact.innerHTML = 'Contact';
+    listElementContact.setAttribute('class', 'contact');
+
+    list.appendChild(listElementContact);
+    navbar.appendChild(list);
+    header.appendChild(navbar);
+
+    element.appendChild(header);
+
+    // MAIN CONTENT
+    const main = document.createElement('div');
+    main.setAttribute('id', 'main');
+    
+    main.appendChild(document.createElement('div'));
+
+    element.appendChild(main);
+
+    // FOOTER
+    const footer = document.createElement('div');
+    footer.setAttribute('id', 'footer');
+
+    const footerUl = document.createElement('ul');
+    const footerLi = document.createElement('li');
+
+    footerLi.innerHTML = 'Copyright © 2022 smlrodrigues';
+
+    footerUl.appendChild(footerLi);
+    footer.appendChild(footerUl);
+
+    element.appendChild(footer);
+
+    //
 };
