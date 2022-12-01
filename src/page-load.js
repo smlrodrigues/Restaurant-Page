@@ -1,6 +1,3 @@
-import RestaurantImage from './jay.jpg';
-// import './style.css';
-
 export function pageLoad(element) {
 
     // HEADER
@@ -27,17 +24,17 @@ export function pageLoad(element) {
     const listElementContact = document.createElement('li');
 
     listElementHome.innerHTML = 'Home';
-    listElementHome.setAttribute('class', 'home');
+    listElementHome.setAttribute('class', 'home-nav');
 
     list.appendChild(listElementHome);
 
     listElementMenu.innerHTML = 'Menu';
-    listElementMenu.setAttribute('class', 'menu');
+    listElementMenu.setAttribute('class', 'menu-nav');
     
     list.appendChild(listElementMenu);
 
     listElementContact.innerHTML = 'Contact';
-    listElementContact.setAttribute('class', 'contact');
+    listElementContact.setAttribute('class', 'contact-nav');
 
     list.appendChild(listElementContact);
     navbar.appendChild(list);
@@ -66,6 +63,4 @@ export function pageLoad(element) {
     footer.appendChild(footerUl);
 
     element.appendChild(footer);
-
-    //
 };
